@@ -305,7 +305,7 @@ def main(overridden_args=None):
         
 	try:
            N, points, dd_points, d, D, C, ewt, K, L, st = pickle.load( open( pfn, "rb" ) )
-        except:
+	except:
            N, points, dd_points, d, D, C, ewt = cvrp_io.read_TSPLIB_CVRP(pfn)
            K, L, st = cvrp_io.read_TSBLIB_additional_constraints(pfn)
         
